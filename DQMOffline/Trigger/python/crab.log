@@ -1,0 +1,244 @@
+DEBUG 2017-12-05 17:01:22,190: 	 Executing command: 'checkwrite'
+DEBUG 2017-12-05 17:01:22,193: 	 Found CRAB cache file /afs/cern.ch/user/e/eliza/.crab3
+DEBUG 2017-12-05 17:01:22,278: 	 Checking credentials
+DEBUG 2017-12-05 17:01:22,281: 	 Found proxy file /tmp/x509up_u31141
+DEBUG 2017-12-05 17:01:22,281: 	 Getting proxy life time left
+DEBUG 2017-12-05 17:01:24,113: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u31141 -timeleft
+ output : 0
+
+ error: 
+ retcode : 0
+DEBUG 2017-12-05 17:01:24,113: 	 Proxy valid for 00:00:00 hours
+DEBUG 2017-12-05 17:01:24,113: 	 Creating new proxy for 24:00 hours with VO group '' and VO role 'NULL'.
+DEBUG 2017-12-05 17:01:32,813: 	 Executing : 
+ command : voms-proxy-init -voms cms:/cms -valid 24:00 -rfc
+ output : None
+ error: None
+ retcode : 1
+DEBUG 2017-12-05 17:01:34,633: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u31141 -timeleft
+ output : 0
+
+ error: 
+ retcode : 0
+DEBUG 2017-12-05 17:01:36,200: 	 Executing : 
+ command : env X509_USER_PROXY=/tmp/x509up_u31141 voms-proxy-info -fqan
+ output : /cms/Role=NULL/Capability=NULL
+
+ error: 
+ retcode : 0
+ERROR 2017-12-05 17:01:36,200: 	 Problems creating proxy.
+ERROR 2017-12-05 17:01:36,202: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1707.patch1/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1707.patch1/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1707.patch1/lib/python2.7/site-packages/CRABClient/Commands/checkwrite.py", line 22, in __init__
+    SubCommand.__init__(self, logger, cmdargs)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1707.patch1/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 292, in __init__
+    self.proxyCreated = self.proxy.createNewVomsProxySimple(timeLeftThreshold = 720)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1707.patch1/lib/python2.7/site-packages/CRABClient/CredentialInteractions.py", line 152, in createNewVomsProxySimple
+    raise ProxyCreationException("Problems creating proxy.")
+ProxyCreationException: Problems creating proxy.
+DEBUG 2017-12-05 17:01:48,217: 	 Executing command: 'checkwrite'
+DEBUG 2017-12-05 17:01:48,217: 	 Found CRAB cache file /afs/cern.ch/user/e/eliza/.crab3
+DEBUG 2017-12-05 17:01:48,234: 	 Checking credentials
+DEBUG 2017-12-05 17:01:48,234: 	 Found proxy file /tmp/x509up_u31141
+DEBUG 2017-12-05 17:01:48,235: 	 Getting proxy life time left
+DEBUG 2017-12-05 17:01:49,266: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u31141 -timeleft
+ output : 0
+
+ error: 
+ retcode : 0
+DEBUG 2017-12-05 17:01:49,266: 	 Proxy valid for 00:00:00 hours
+DEBUG 2017-12-05 17:01:49,267: 	 Creating new proxy for 24:00 hours with VO group '' and VO role 'NULL'.
+DEBUG 2017-12-05 17:02:13,450: 	 Executing : 
+ command : voms-proxy-init -voms cms:/cms -valid 24:00 -rfc
+ output : None
+ error: None
+ retcode : 0
+DEBUG 2017-12-05 17:02:14,673: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u31141 -timeleft
+ output : 86397
+
+ error: 
+ retcode : 0
+DEBUG 2017-12-05 17:02:15,988: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u31141 -actimeleft
+ output : 86396
+
+ error: 
+ retcode : 0
+DEBUG 2017-12-05 17:02:17,324: 	 Executing : 
+ command : env X509_USER_PROXY=/tmp/x509up_u31141 voms-proxy-info -fqan
+ output : /cms/Role=NULL/Capability=NULL
+
+ error: 
+ retcode : 0
+DEBUG 2017-12-05 17:02:17,324: 	 Proxy created.
+DEBUG 2017-12-05 17:02:17,445: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=eliza/CN=676332/CN=Eliza Melo Da Costa
+
+ error: 
+ retcode : 0
+DEBUG 2017-12-05 17:02:17,445: 	 Checking credentials
+DEBUG 2017-12-05 17:02:17,448: 	 Found proxy file /tmp/x509up_u31141
+DEBUG 2017-12-05 17:02:17,448: 	 Getting proxy life time left
+DEBUG 2017-12-05 17:02:18,785: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u31141 -timeleft
+ output : 86393
+
+ error: 
+ retcode : 0
+DEBUG 2017-12-05 17:02:19,923: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u31141 -actimeleft
+ output : 86392
+
+ error: 
+ retcode : 0
+DEBUG 2017-12-05 17:02:19,923: 	 Proxy valid for 23:59:53 hours
+DEBUG 2017-12-05 17:02:21,155: 	 Executing : 
+ command : env X509_USER_PROXY=/tmp/x509up_u31141 voms-proxy-info -fqan
+ output : /cms/Role=NULL/Capability=NULL
+
+ error: 
+ retcode : 0
+DEBUG 2017-12-05 17:02:21,155: 	 Command use: checkwrite
+DEBUG 2017-12-05 17:02:21,155: 	 Options use: ['--site=T3_CH_CERN_CAF']
+DEBUG 2017-12-05 17:02:21,155: 	 Instance is None
+DEBUG 2017-12-05 17:02:21,155: 	 Server base url is None
+DEBUG 2017-12-05 17:02:21,164: 	 Service initialised ({'endpoint': 'https://cmsweb.cern.ch/phedex/datasvc/json/prod/', 'key': '/tmp/x509up_u31141', 'maxcachereuse': 24.0, 'cachepath': '/tmp/eliza/.wmcore_cache_OndVtb/cmsweb.cern.ch', 'inputdata': {}, 'cert': '/tmp/x509up_u31141', 'timeout': 300, 'service_name': 'PhEDEx', 'requests': {'content_type': 'application/x-www-form-urlencoded', 'cacheduration': 0, 'host': 'https://cmsweb.cern.ch/phedex/datasvc/json/prod/', 'accept_type': 'text/html', 'key': '/tmp/x509up_u31141', 'deleteCacheOnExit': <WMCore.Services.Requests.TempDirectory object at 0x7ff71c1c0490>, 'endpoint_components': ParseResult(scheme='https', netloc='cmsweb.cern.ch', path='/phedex/datasvc/json/prod/', params='', query='', fragment=''), 'endpoint': 'https://cmsweb.cern.ch/phedex/datasvc/json/prod/', 'pycurl': True, 'cachepath': '/tmp/eliza/.wmcore_cache_OndVtb/cmsweb.cern.ch', 'cert': '/tmp/x509up_u31141', 'timeout': 300, 'req_cache_path': '/tmp/eliza/.wmcore_cache_OndVtb/cmsweb.cern.ch/.cache', 'logger': <logging.Logger object at 0x7ff71c1a3650>}, 'logger': <logging.Logger object at 0x7ff71c1a3650>, 'cacheduration': 0, 'method': None, 'pycurl': True}):
+	 host: cmsweb.cern.ch, basepath: https://cmsweb.cern.ch/phedex/datasvc/json/prod/ (text/html)
+	 cache: /tmp/eliza/.wmcore_cache_OndVtb/cmsweb.cern.ch (duration 0 hours, max reuse 24.0 hours)
+INFO 2017-12-05 17:02:21,164: 	 Will check write permission in the default location /store/user/<username>
+INFO 2017-12-05 17:02:21,165: 	 Retrieving DN from proxy...
+INFO 2017-12-05 17:02:26,165: 	 DN is: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=eliza/CN=676332/CN=Eliza Melo Da Costa
+INFO 2017-12-05 17:02:26,165: 	 Retrieving username from SiteDB...
+INFO 2017-12-05 17:02:32,146: 	 Username is: eliza
+INFO 2017-12-05 17:02:32,146: 	 Validating LFN /store/user/eliza...
+INFO 2017-12-05 17:02:32,147: 	 LFN /store/user/eliza is valid.
+INFO 2017-12-05 17:02:32,233: 	 Will use `gfal-copy`, `gfal-rm` commands for checking write permissions
+INFO 2017-12-05 17:02:32,234: 	 Will check write permission in /store/user/eliza on site T3_CH_CERN_CAF
+DEBUG 2017-12-05 17:02:32,264: 	 getData: 
+	url: lfn2pfn
+	data: {'node': ['T3_CH_CERN_CAF'], 'custodial': 'n', 'lfn': ['/store/user/eliza/crab3checkwrite_20171205_170232/crab3checkwrite_20171205_170232.tmp'], 'protocol': 'srmv2'}
+WARNING 2017-12-05 17:02:33,350: 	 The cachefile /tmp/eliza/.wmcore_cache_OndVtb/cmsweb.cern.ch/-5694263277635148621_GET_lfn2pfn does not exist and the service at https://cmsweb.cern.ch/phedex/datasvc/json/prod/lfn2pfn is unavailable - it returned 400 because Bad Request
+ with result: no nodes found for ' T3_CH_CERN_CAF '.\n
+
+INFO 2017-12-05 17:02:33,351: 	 Error: Failed to contact PhEDEx or wrong PhEDEx node name is used
+INFO 2017-12-05 17:02:33,351: 	 Result: no nodes found for ' T3_CH_CERN_CAF '.\n
+Status :400
+URL :https://cmsweb.cern.ch/phedex/datasvc/json/prod/lfn2pfn
+INFO 2017-12-05 17:02:33,351: 	 The server answered with an error.
+DEBUG 2017-12-05 17:02:33,351: 	 ERROR: Bad Request (400):  'no nodes found for ' T3_CH_CERN_CAF '.\n'
+DEBUG 2017-12-05 17:02:33,351: 	 Command failed with URI: https://cmsweb.cern.ch/phedex/datasvc/json/prod/lfn2pfn
+DEBUG 2017-12-05 17:02:33,351: 	      Input data: {'node': ['T3_CH_CERN_CAF'], 'custodial': 'n', 'lfn': ['/store/user/eliza/crab3checkwrite_20171205_170232/crab3checkwrite_20171205_170232.tmp'], 'protocol': 'srmv2'}
+DEBUG 2017-12-05 17:02:33,351: 	      Request headers: {'Content-Length': '40', 'Expires': 'Tue, 05 Dec 2017 16:17:33 GMT', 'Server': 'Apache', 'Connection': 'close', 'X-Pad': 'avoid browser bug', 'Cache-control': 'public, must-revalidate, max-age=900', 'Date': 'Tue, 05 Dec 2017 16:02:33 GMT', 'Content-Type': 'text/html; charset=iso-8859-1', 'CMS-Server-Time': 'D=17934 t=1512489753327591'}
+ERROR 2017-12-05 17:02:33,351: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1707.patch1/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1707.patch1/bin/crab", line 148, in __call__
+    self.cmd()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1707.patch1/lib/python2.7/site-packages/CRABClient/Commands/checkwrite.py", line 86, in __call__
+    pfn = self.getPFN()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1707.patch1/lib/python2.7/site-packages/CRABClient/Commands/checkwrite.py", line 160, in getPFN
+    pfndict = self.phedex.getPFN(nodes = [self.options.sitename], lfns = [lfnsadd])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1707.patch1/lib/python2.7/site-packages/WMCore/Services/PhEDEx/PhEDEx.py", line 387, in getPFN
+    data = self._getResult('lfn2pfn', args=input_dict, verb='GET')
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1707.patch1/lib/python2.7/site-packages/WMCore/Services/PhEDEx/PhEDEx.py", line 48, in _getResult
+    f = self.refreshCache(file, callname, args, verb=verb)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1707.patch1/lib/python2.7/site-packages/WMCore/Services/Service.py", line 201, in refreshCache
+    self.getData(cachefile, url, inputdata, incoming_headers, encoder, decoder, verb, contentType)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1707.patch1/lib/python2.7/site-packages/WMCore/Services/Service.py", line 309, in getData
+    raise he
+HTTPException: url=https://cmsweb.cern.ch/phedex/datasvc/json/prod/lfn2pfn, code=400, reason=Bad Request, headers={'Content-Length': '40', 'Expires': 'Tue, 05 Dec 2017 16:17:33 GMT', 'Server': 'Apache', 'Connection': 'close', 'X-Pad': 'avoid browser bug', 'Cache-control': 'public, must-revalidate, max-age=900', 'Date': 'Tue, 05 Dec 2017 16:02:33 GMT', 'Content-Type': 'text/html; charset=iso-8859-1', 'CMS-Server-Time': 'D=17934 t=1512489753327591'}
+DEBUG 2017-12-05 17:04:06,609: 	 Executing command: 'checkwrite'
+DEBUG 2017-12-05 17:04:06,609: 	 Found CRAB cache file /afs/cern.ch/user/e/eliza/.crab3
+DEBUG 2017-12-05 17:04:06,617: 	 Checking credentials
+DEBUG 2017-12-05 17:04:06,618: 	 Found proxy file /tmp/x509up_u31141
+DEBUG 2017-12-05 17:04:06,618: 	 Getting proxy life time left
+DEBUG 2017-12-05 17:04:07,936: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u31141 -timeleft
+ output : 86284
+
+ error: 
+ retcode : 0
+DEBUG 2017-12-05 17:04:09,464: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u31141 -actimeleft
+ output : 86282
+
+ error: 
+ retcode : 0
+DEBUG 2017-12-05 17:04:09,464: 	 Proxy valid for 23:58:04 hours
+DEBUG 2017-12-05 17:04:09,711: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=eliza/CN=676332/CN=Eliza Melo Da Costa
+
+ error: 
+ retcode : 0
+DEBUG 2017-12-05 17:04:09,712: 	 Checking credentials
+DEBUG 2017-12-05 17:04:09,712: 	 Found proxy file /tmp/x509up_u31141
+DEBUG 2017-12-05 17:04:09,712: 	 Getting proxy life time left
+DEBUG 2017-12-05 17:04:11,281: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u31141 -timeleft
+ output : 86280
+
+ error: 
+ retcode : 0
+DEBUG 2017-12-05 17:04:12,435: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u31141 -actimeleft
+ output : 86279
+
+ error: 
+ retcode : 0
+DEBUG 2017-12-05 17:04:12,435: 	 Proxy valid for 23:58:00 hours
+DEBUG 2017-12-05 17:04:13,657: 	 Executing : 
+ command : env X509_USER_PROXY=/tmp/x509up_u31141 voms-proxy-info -fqan
+ output : /cms/Role=NULL/Capability=NULL
+
+ error: 
+ retcode : 0
+DEBUG 2017-12-05 17:04:13,657: 	 Command use: checkwrite
+DEBUG 2017-12-05 17:04:13,657: 	 Options use: ['--site=T2_CH_CERN']
+DEBUG 2017-12-05 17:04:13,657: 	 Instance is None
+DEBUG 2017-12-05 17:04:13,658: 	 Server base url is None
+DEBUG 2017-12-05 17:04:13,667: 	 Service initialised ({'endpoint': 'https://cmsweb.cern.ch/phedex/datasvc/json/prod/', 'key': '/tmp/x509up_u31141', 'maxcachereuse': 24.0, 'cachepath': '/tmp/eliza/.wmcore_cache_I41zw9/cmsweb.cern.ch', 'inputdata': {}, 'cert': '/tmp/x509up_u31141', 'timeout': 300, 'service_name': 'PhEDEx', 'requests': {'content_type': 'application/x-www-form-urlencoded', 'cacheduration': 0, 'host': 'https://cmsweb.cern.ch/phedex/datasvc/json/prod/', 'accept_type': 'text/html', 'key': '/tmp/x509up_u31141', 'deleteCacheOnExit': <WMCore.Services.Requests.TempDirectory object at 0x7fb0e18b6210>, 'endpoint_components': ParseResult(scheme='https', netloc='cmsweb.cern.ch', path='/phedex/datasvc/json/prod/', params='', query='', fragment=''), 'endpoint': 'https://cmsweb.cern.ch/phedex/datasvc/json/prod/', 'pycurl': True, 'cachepath': '/tmp/eliza/.wmcore_cache_I41zw9/cmsweb.cern.ch', 'cert': '/tmp/x509up_u31141', 'timeout': 300, 'req_cache_path': '/tmp/eliza/.wmcore_cache_I41zw9/cmsweb.cern.ch/.cache', 'logger': <logging.Logger object at 0x7fb0e189a610>}, 'logger': <logging.Logger object at 0x7fb0e189a610>, 'cacheduration': 0, 'method': None, 'pycurl': True}):
+	 host: cmsweb.cern.ch, basepath: https://cmsweb.cern.ch/phedex/datasvc/json/prod/ (text/html)
+	 cache: /tmp/eliza/.wmcore_cache_I41zw9/cmsweb.cern.ch (duration 0 hours, max reuse 24.0 hours)
+INFO 2017-12-05 17:04:13,667: 	 Will check write permission in the default location /store/user/<username>
+INFO 2017-12-05 17:04:13,667: 	 Retrieving DN from proxy...
+INFO 2017-12-05 17:04:17,234: 	 DN is: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=eliza/CN=676332/CN=Eliza Melo Da Costa
+INFO 2017-12-05 17:04:17,234: 	 Retrieving username from SiteDB...
+INFO 2017-12-05 17:04:22,944: 	 Username is: eliza
+INFO 2017-12-05 17:04:22,944: 	 Validating LFN /store/user/eliza...
+INFO 2017-12-05 17:04:22,945: 	 LFN /store/user/eliza is valid.
+INFO 2017-12-05 17:04:23,022: 	 Will use `gfal-copy`, `gfal-rm` commands for checking write permissions
+INFO 2017-12-05 17:04:23,022: 	 Will check write permission in /store/user/eliza on site T2_CH_CERN
+DEBUG 2017-12-05 17:04:23,032: 	 getData: 
+	url: lfn2pfn
+	data: {'node': ['T2_CH_CERN'], 'custodial': 'n', 'lfn': ['/store/user/eliza/crab3checkwrite_20171205_170423/crab3checkwrite_20171205_170423.tmp'], 'protocol': 'srmv2'}
+INFO 2017-12-05 17:04:24,570: 	 
+Attempting to create (dummy) directory crab3checkwrite_20171205_170423 and copy (dummy) file crab3checkwrite_20171205_170423.tmp to /store/user/eliza
+
+INFO 2017-12-05 17:04:24,578: 	 Executing command: env -i X509_USER_PROXY=/tmp/x509up_u31141 gfal-copy -p -v -t 180 file:///afs/cern.ch/work/e/eliza/public/DQM/CMSSW_1000pre1_DQMtest/src/DQMOffline/Trigger/python/crab3checkwrite_20171205_170423.tmp 'gsiftp://eoscmsftp.cern.ch//eos/cms/store/user/eliza/crab3checkwrite_20171205_170423/crab3checkwrite_20171205_170423.tmp'
+INFO 2017-12-05 17:04:24,579: 	 Please wait...
+INFO 2017-12-05 17:04:25,430: 	 Failed running copy command
+INFO 2017-12-05 17:04:25,430: 	   Stdout:
+    Copying 85 bytes file:///afs/cern.ch/work/e/eliza/public/DQM/CMSSW_1000pre1_DQMtest/src/DQMOffline/Trigger/python/crab3checkwrite_20171205_170423.tmp => gsiftp://eoscmsftp.cern.ch//eos/cms/store/user/eliza/crab3checkwrite_20171205_170423/crab3checkwrite_20171205_170423.tmp
+    event: [1512489865360] BOTH   GFAL2:CORE:COPY	LIST:ENTER	
+    event: [1512489865360] BOTH   GFAL2:CORE:COPY	LIST:ITEM	file:///afs/cern.ch/work/e/eliza/public/DQM/CMSSW_1000pre1_DQMtest/src/DQMOffline/Trigger/python/crab3checkwrite_20171205_170423.tmp => gsiftp://eoscmsftp.cern.ch//eos/cms/store/user/eliza/crab3checkwrite_20171205_170423/crab3checkwrite_20171205_170423.tmp
+    event: [1512489865360] BOTH   GFAL2:CORE:COPY	LIST:EXIT	
+    
+INFO 2017-12-05 17:04:25,430: 	   Stderr:
+    gfal-copy error: 13 (Permission denied) - globus_ftp_client: the server responded with an error 500 mkdir() fail : [ERROR] Error response: Permission denied   
+    
+INFO 2017-12-05 17:04:25,522: 	 
+Checkwrite Result:
+INFO 2017-12-05 17:04:25,523: 	 Error: Unable to write in /store/user/eliza on site T2_CH_CERN
+       You may want to contact the site administrators sending them the 'crab checkwrite' output as printed above.
+INFO 2017-12-05 17:04:25,523: 	 Note: You cannot write to a site if you did not ask permission.

@@ -1,0 +1,4 @@
+DEBUG 2017-12-06 17:39:29,379: 	 Executing command: 'getoutput'
+DEBUG 2017-12-06 17:39:29,380: 	 Found CRAB cache file /afs/cern.ch/user/e/eliza/.crab3
+DEBUG 2017-12-07 13:08:42,802: 	 Executing command: 'getoutput'
+DEBUG 2017-12-07 13:08:42,803: 	 Found CRAB cache file /afs/cern.ch/user/e/eliza/.crab3
